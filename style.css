@@ -1,0 +1,1179 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    outline: none;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: #f0f8fd;
+}
+/*Main Page*/
+.mainPage{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr min-content;
+}
+/*Left*/
+.left{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: #1aa1f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.leftContent div{
+    display: flex;
+    align-items: center;
+    margin: 4rem;
+    color: #fff;
+}
+.leftContent i{
+    font-size: 3rem;
+    margin-right: 2rem;
+}
+.leftContentHeading{
+    font-size: 2rem;
+}
+/*Right*/
+.right{
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    position: relative;
+}
+.rightContentForm{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.rightContentForm div{
+    position: relative;
+}
+.rightContentForm input{
+    width: 20rem;
+    height: 4.5rem;
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    padding: 0 1rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+.rightContentForm input:focus{
+    background-color: #d9ebf7;
+}
+.rightContentForm label{
+    position: absolute;
+    top: 5.5rem;
+    left: 0;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #a7a6a6;
+}
+.btnTop{
+    width: 8rem;
+    background-color: #fff;
+    color: #1aa1f5;
+    border: 0.1rem solid #1aa1f5;
+    border-radius: 3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btnTop:hover{
+    background-color: #d9ebf7;
+}
+.middleContent{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.middleContent img{
+    width: 2.5rem;
+}
+.middleContent i{
+    font-size: 4rem;
+    color: #1aa1f5;
+    margin-bottom: 2rem;
+}
+.middleContent h1{
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+    line-height: 4rem;
+}
+.middleContent h4{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+.middleContent button{
+    margin: 0.8rem 0;
+    padding: 0.5rem;
+    border: 0.1rem solid #1aa1f5;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.signUp{
+    background-color: #1aa1f5;
+    color: #fff;
+}
+.signUp:hover{
+    background-color: #0f5d8d;
+}
+.logIn{
+    background-color: #fff;
+}
+.logIn:hover{
+    background-color: #d9ebf7;
+}
+/*Footer*/
+.mainPageFooter{
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    background-color: #f4f4;
+    padding: 1.5rem;
+    border-top: 0.1rem solid #ddd;
+}
+.mainPageFooter ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.mainPageFooter a{
+    font-size: 1.2rem;
+    margin: 0 2rem;
+    text-decoration: none;
+    color: #444;
+    font-weight: 300;
+}
+/*Login*/
+.loginPage{
+    width: 100%;
+    height: 100vh;
+    display: none;
+    grid-template-columns: minmax(5rem, 1fr)2fr minmax(5rem, 1fr);
+    grid-template-rows: repeat(2, min-content) 1fr;
+    grid-row-gap: 1.5rem;
+}
+.loginPage nav{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    background-color: #fff;
+    padding: 2.5rem 0;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+.loginPageNav img{
+    width: 2rem;
+    margin-bottom: 2px;
+    cursor: pointer;
+}
+.loginPageNav ul{
+    width: 100rem;
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    list-style: none;
+}
+.loginPageNav li{
+    margin: 0 1rem;
+    position: relative;
+}
+.loginPageNav li:last-child{
+    margin-left: auto;
+}
+.loginPageNav li::after{
+    content: "";
+    width: 100%;
+    height: 0.15rem;
+    background-color: #1aa1f5;
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0;
+    opacity: 0;
+}
+.loginPageNav li:hover::after{
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+.loginPageNav a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+}
+.loginPageNav li:hover a{
+    color: #1aa1f5;
+}
+.login{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #fff;
+    width: 100rem;
+    display: grid;
+    grid-template-columns: 10rem 8fr;
+    grid-template-rows: 2fr 1fr;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+.loginContent{
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    padding: 5rem 0 1rem 0;
+}
+.loginContent h2{
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+}
+.loginForm{
+    display: flex;
+    flex-direction: column;
+}
+.loginForm input:not(.loginFormCheckbox){
+    width: 30rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+}
+.loginForm input:focus{
+    background-color: #d9ebf7;
+}
+.loginForm div{
+    margin-top: 2rem;
+}
+.loginForm button{
+    padding: 1rem 1.5rem;
+    background-color: #1aa1f5;
+    color: #fff;
+    border-radius: 4rem;
+    border: 0.1rem solid #1aa1f5;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+input[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 11px;
+    width: 11px;
+    background-color: #d5d5d5;
+    border-radius: 0.7px;
+    cursor: pointer;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+input[type="checkbox"]:after{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f00c";
+    font-size: 11px;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    display: none;
+}
+input[type="checkbox"]:hover{
+    background-color: #ddd;
+}
+input[type="checkbox"]:checked{
+    background-color: #1aa1f5;
+}
+input[type="checkbox"]:checked:after{
+    display: block;
+}
+.loginForm label{
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.loginForm a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #1aa1f5;
+}
+.loginFooter{
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    background-color: #edf3f7;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.loginFooter p{
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0.5 0;
+}
+.loginFooter a{
+    text-decoration: none;
+    color: #1aa1f5;
+}
+/* Login Modal */
+.loginModal {
+    position: fixed;
+    top: 11.5rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 70rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 1rem 1rem;
+    display: none;
+}
+.loginModal i{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.3rem;
+    color: #868383;
+    cursor: pointer;
+}
+.loginModal p{
+    margin: 2rem 1rem 0 1rem;
+    font-size: 1.6rem;
+    color: #868383;
+}
+/*News feed page*/
+.feedPage{
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.feedNav{
+    position: fixed;
+    width: 100%;
+    height: 6.5rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 0.7rem rgba(0, 0, 0, 0.3);
+}
+.icons{
+    display: flex;
+    align-items: center;
+}
+.icons a{
+    text-decoration: none;
+    margin-right: 7rem;
+    font-size: 2.5rem;
+    color: #9e9a9a;
+}
+.icons .active{
+    color: #1aa1f5;
+}
+.searchBar{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.searchBarInput{
+    width: 35rem;
+    height: 3rem;
+    border: 0.1rem solid #d6e1e9;
+    border-radius: 3rem;
+    background-color: #d6e1e9;
+    padding-left: 5rem;
+    transition: all 0.3s;
+}
+.searchBarInput:focus{
+    background-color: #fff;
+    border-color: #1aa1f5;
+}
+.searchBar i{
+    position: absolute;
+    font-size: 1.6rem;
+    left: 1.5rem;
+    color: #9e9a9a;
+}
+.user{
+    margin-left: 3rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.userImageWrapper{
+    width: 4rem;
+    height: 4rem;
+}
+.userImageWrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.userLink{
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #444;
+}
+.user i{
+    color: #444;
+    font-size: 1.3rem;
+}
+/*Feed Content*/
+.feedContent{
+    display: grid;
+    grid-template-columns: minmax(5rem, 1fr) 60rem 40rem minmax(5rem, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    padding-top: 6.5rem;
+}
+.feedHeader{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: #fff;
+    margin-top: 1.5rem;
+}
+.headerTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.1rem solid #eee;
+    padding: 1.5rem;
+}
+.headerTop h4{
+    font-size: 2.2rem;
+}
+.headerTop i{
+    font-size: 2rem;
+    color: #1aa1f5;
+}
+.headerPost {
+    display: flex;
+    align-items: center;
+    padding: 1rem; 
+    border-bottom: 0.1rem solid #eee;
+}
+.headerImageWrapper{
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.5rem;
+}
+.headerImageWrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.headerPost input{
+    width: 35rem;
+    height: 3rem;
+    border: 0.1rem solid #d6e1e9;
+    border-radius: 3rem;
+    background-color: #d6e1e9;
+    padding: 0.4rem 1.5rem;
+}
+.headerPost i{
+    font-size: 2.5rem;
+    color: #1aa1f5;
+    margin: 1rem;
+}
+.posts{
+    grid-column: 2/3;
+    grid-row: 2/-1;
+    background-color: #fff;
+}
+.post{
+    display: flex;
+    padding: 1.5rem;
+    border-bottom: 0.1rem solid #eee;
+}
+.userAvatar{
+    width: 6rem;
+    height: 6rem;
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+}
+.userAvatar img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.postUserInfo{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0rem;
+}
+.postUserInfo h4{
+    font-size: 1.6rem;
+    margin-right: 0.5rem;
+}
+.postUserInfo i{
+    font-size: 1.6rem;
+    color: #1aa1f5;
+    margin-right: 0.5rem;
+}
+.postUserInfo span{
+    font-size: 1.2rem;
+}
+.postText{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.postImage{
+    width: 48rem;
+    height: 30rem;
+}
+.postImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.postIcons{
+    margin-top: 1rem;
+}
+.postIcons i{
+    font-size: 1.8rem;
+    color: #868383;
+    margin-right: 6rem;
+}
+.follow{
+    position: fixed;
+    top: 8rem;
+    left: 57%;
+    background-color: #fff;
+    width: 35rem;
+}
+.followHeading{
+    padding: 1rem;
+    font-size: 1.8rem;
+    border-bottom: 0.1rem solid #eee;
+}
+.followUser{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 0.1rem solid #eee;
+}
+.followUserImage{
+    width: 6rem;
+    height: 6rem;
+    margin: 0.5rem;
+}
+.followUserImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.followUserInfo h4{
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.followUserInfo p{
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+.followBtn{
+    margin-left: auto;
+    width: 9rem;
+    background-color: #fff;
+    color: #1aa1f5;
+    padding: 0.7rem 0.5rem;
+    border: 0.1rem solid #1aa1f5;
+    border-radius: 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+.followLink{
+    margin: 2rem 1rem;
+}
+.followLink a{
+    text-decoration: none;
+    color: #1aa1f5;
+    font-size: 1.5rem;
+}
+.followFooter{
+    background-color: #f0f8fd;
+}
+.followFooter ul{
+    list-style-type: none;
+    display: flex;
+    padding: 2rem 0;
+}
+.followFooter a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #868383;
+    margin: 0 0.7rem;
+}
+/*Post Button*/
+.postBtn{
+    position: fixed;
+    bottom: 2rem;
+    left: 68%;
+    width: 12rem;
+    padding: 1.5rem 1rem;
+    background-color: #1aa1f5;
+    color: #fff;
+    font-size: 2rem;
+    border: 0.1rem solid #1aa1f5;
+    border-radius: 3rem;
+    cursor: pointer;
+    box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+}
+.postBtn:hover{
+    background-color: #117abb;
+}
+/* Post Modal */
+.modalWrapper {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.modalWrapperDisplay {
+    opacity: 1;
+    visibility: visible;
+}
+.modal {
+    width: 60rem;
+    background-color: #fff;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1.5rem;
+    display: none;
+}
+.modalHeader {
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.1rem solid #eee;
+}
+.modalHeader i{
+    font-size: 2.3rem;
+    color: #1aa1f5;
+    cursor: pointer;
+}
+.modalHeader button{
+    margin-left: auto;
+    width: 8rem;
+    padding: 0.8rem 0.5rem;
+    background-color: #1aa1f5;
+    color: #fff;
+    font-size: 1.6rem;
+    border: 0.1rem solid #1aa1f5;
+    border-radius: 3rem;
+    opacity: 0.5;
+}
+.modalBody {
+    display: flex;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+}
+.modalImage {
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1.5rem;
+}
+.modalImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.modalInput {
+    width: 53rem;
+    padding: 1rem 0 8rem 1rem;
+    background-color: #d6e1e9;
+    border: 0.1rem solid #eee;
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
+}
+.modalInput:focus{
+    background-color: #fff;
+    border-color: #1aa1f5;
+}
+.modalBody i{
+    position: absolute;
+    bottom: 8.5rem;
+    right: 2.8rem;
+    font-size: 2rem;
+    color: #1aa1f5;
+}
+.modalFooter {
+    padding: 0 2rem 2rem 8rem;
+}
+.modalIcons {
+    display: flex;
+    align-items: center;
+}
+.modalIcons i{
+    margin-right: 2rem;
+    font-size: 2.7rem;
+    color: #1aa1f5;
+}
+.modalIcons span{
+    margin-left: auto;
+    font-size: 5rem;
+    width: 4rem;
+    height: 4rem;
+    border: 0.1rem solid #1aa1f5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1aa1f5;
+    opacity: 0.5;
+}
+/* Sidebar */
+.sidebarWrapper {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+.sidebarWrapperDisplay {
+    opacity: 1;
+    visibility: visible;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -30rem;
+    width: 30rem;
+    height: 100vh;
+    background-color: #fff;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    box-shadow: -0.1rem 0 0.5rem rgba(0, 0, 0, 0.3);
+    transition: right 0.5s cubic-bezier(1, 0, 0, 1);
+}
+.sidebarDisplay{
+    right: 0;
+}
+.sidebarHeader {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid #eee;
+}
+.sidebarHeader h2{
+    font-size: 2rem;
+}
+.sidebarHeader i{
+    margin-left: auto;
+    font-size: 1.5rem;
+    color: #1aa1f5;
+    cursor: pointer;
+}
+.sidebarUser {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+.sidebarUserImg {
+    width: 4rem;
+    height: 4rem;
+}
+.sidebarUserImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.sidebarUser span{
+    margin-left: auto;
+    width: 2rem;
+    height: 2rem;
+    font-size: 3.5rem;
+    border: 0.1rem solid #1aa1f5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1aa1f5;
+}
+.sidebarUserInfo {
+    padding: 1.5rem 0;
+    font-size: 1.6rem;
+}
+.sidebarUserInfo h4{
+    margin-bottom: 0.5rem;
+}
+.following {
+    display: flex;
+    padding: 1.5rem 0;
+}
+.followingParagraph{
+    font-size: 1.8rem;
+}
+.followingParagraph:first-child{
+    margin-right: 2.5rem;
+}
+.followingParagraph span{
+    font-weight: bold;
+}
+.sidebarList1 {
+    border-bottom: 0.1rem solid #eee;
+}
+.sidebarList1 ul{
+    list-style: none;
+    padding: 1rem 0;
+}
+.sidebarList1 li{
+    margin-bottom: 2rem;
+}
+.sidebarList1 a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #868383;
+}
+.sidebarList1 i{
+    margin-right: 1rem;
+}
+.sidebarList2 ul{
+    list-style: none;
+    padding: 2rem 0;
+}
+.sidebarList2 li{
+    margin-bottom: 2rem;
+}
+.sidebarList2 a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: #868383;
+}
+/* Dark Mode */
+.darkMode {
+    display: flex;
+    align-items: center;
+}
+.darkMode p{
+    margin-right: 8rem;
+    font-size: 1.4rem;
+    color: #868383;
+}
+
+.toggle {
+    width: 2.5rem;
+    height: 1.5rem;
+    background-color: #777;
+    border-radius: 3rem;
+    box-shadow: inset 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+.circle {
+    width: 2rem;
+    height: 2rem;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: absolute;
+    top: -15%;
+    left: 0;
+    transform: translate(-50%);
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+    transition: all 0.1s linear;
+    cursor: pointer;
+}
+.move {
+    left: 2.5rem;
+    background-color: #117abb;
+}
+.dark1 {
+    background-color: #1c2938;
+}
+.dark2 {
+    background-color: #10171e !important;
+}
+.light {
+    color: #fff;
+}
+.borderColor {
+    border-color: #444 !important;
+}
+/* Responsive */
+@media(max-width: 1600px){
+    /* News feed page */
+    .follow{
+        left: 58.5%;
+    }
+}
+@media(max-width: 1300px){
+    /* main page */
+    .middleContent{
+        width: 60%;
+    }
+    .mainPageFooter ul{
+        flex-wrap: wrap;
+    }
+    .mainPageFooter li{
+        margin-bottom: 1rem;
+    }
+    /* Login Page */
+    .loginPageNav ul{
+        width: 80rem;
+    }
+    .login{
+        width: 80rem;
+    }
+    .loginModal{
+        width: 60rem;
+    }
+    /* News feed page */
+    .follow{
+        left: 60%;
+    }
+}
+@media(max-width: 1100px){
+    .mainPage{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr) min-content;
+    }
+    .right{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 70%;
+        margin: auto; 
+    }
+    .rightContentForm{
+        display: none;
+    }
+    .left{
+        grid-row: 2/3;
+    }
+    .leftContent{
+        width: 50%;
+        margin: auto;
+    }
+    .leftContent h3{
+        line-height: 3rem;
+    }
+    .mainPageFooter{
+        grid-row: 3/4;
+    }
+    /* News feed page */
+    .feedContent{
+        grid-template-columns: minmax(5rem, 1fr) 2fr minmax(5rem, 1fr);
+    }
+    .searchBar{
+        display: none;
+    }
+    .follow{
+        display: none;
+    }
+    .postBtn{
+        left: 80%;
+    }
+}
+@media(max-width: 800px){
+    .right{
+        width: 80%;
+    }
+    .middleContent i{
+        display: none;
+    }
+    .middleContent h1{
+        margin-bottom: 2rem;
+    }
+    .middleContent h4{
+        margin-bottom: 1rem;
+    }
+    .leftContent{
+        width: 60%;
+    }
+}
+@media(max-width: 900px){
+    /* Login Page */
+    .loginPageNav ul{
+        width: 60rem;
+    }
+    .login{
+        width: 60rem;
+    }
+    .loginModal{
+        width: 50rem;
+    }
+}
+@media(max-width: 700px){
+    /* Login Page */
+    .loginPageNav ul{
+        width: 50rem;
+    }
+    .login{
+        width: 50rem;
+    }
+    .loginModal{
+        width: 40rem;
+    }
+    /* News feed page */
+    .feedContent{
+        grid-template-columns: 1fr;
+    }
+    .feedHeader{
+        grid-column: 1/-1;
+    }
+    .post{
+        grid-column: 1/-1;
+    }
+    .modal{
+        width: 90%;
+    }
+    .modalImage{
+        flex-shrink: 0;
+    }
+    .postBtn{
+        left: 75%;
+        font-size: 1.8rem;
+        width: 11rem;
+        padding: 1.2rem 0.8rem;
+    }
+    .sidebarList1 li,
+    .sidebarList2 li{
+        margin-bottom: 1.5rem;
+    }
+}
+@media(max-width: 600px){
+    .mainPage{
+        grid-template-rows: 1fr min-content;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        grid-row: 1/2;
+        width: 90%;
+    }
+    /* Login Page */
+    .loginPageNav ul{
+        width: 40rem;
+    }
+    .login{
+        width: 40rem;
+        grid-template-columns: 5rem 8fr;
+    }
+    .loginForm label{
+        font-size: 1.4rem;
+    }
+    .loginForm a{
+        font-size: 1.4rem;
+    }
+    .loginFooter{
+        padding-left: 5rem;
+    }
+    .loginFooter p{
+        font-size: 1.4rem;
+    }
+    .loginModal{
+        width: 30rem;
+    }
+    .loginModal i{
+        top: 2.5rem;
+    }
+    .loginModal p{
+        font-size: 1.4rem;
+    }
+    /* News feed page */
+    .user a,
+    .user i{
+        display: none;
+    }
+    .headerPost input{
+        width: 27rem;
+    }
+    .postText{
+        width: 90%;
+    }
+    .postImage{
+        width: 90%;
+        height: 25rem;
+    }
+    .postBtn{
+        left: 70%;
+    }
+}
+@media(max-width: 500px){
+    .middleContent{
+        font-size: 2.5rem;
+    }
+    /* Login Page */
+    .loginPageNav ul{
+        width: 35rem;
+    }
+    .login{
+        width: 30rem;
+        grid-template-columns: 2rem 8fr;
+    }
+    .loginForm input:not(.loginFormCheckbox){
+        width: 20rem;
+    }
+    .loginForm a{
+        display: block;
+        margin-top: 1.5rem;
+    }
+    .loginFooter{
+        padding-left: 2rem;
+    }
+    /* News feed page */
+    .icons a{
+        margin-right: 5rem;
+    }
+    .headerImageWrapper{
+        display: none;
+    }
+    .headerPost{
+        justify-content: center;
+    }
+    .headerPost input{
+        width: 20rem;
+    }
+    .post{
+        padding: 1rem;
+    }
+    .userAvatar{
+        width: 4rem;
+        height: 4rem;
+        margin-right: 1rem;
+    }
+}
+@media(max-width: 400px){
+    /* Login Page */
+    .loginPageNav ul{
+        width: 31.5rem;
+    }
+
+    .loginPage{
+        grid-template-columns: 2rem 2fr 2rem;
+    }
+    .login{
+        width: 100%;
+    }
+    .loginModal{
+        width: 25rem;
+    }
+}
